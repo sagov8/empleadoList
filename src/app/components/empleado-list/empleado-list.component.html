@@ -1,0 +1,66 @@
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="genero"
+          id="todos"
+          value="Masculino"
+        />
+        <label class="form-check-label" for="todos"
+          >Todos ({{ obtenerTotalEmpleados() }})</label
+        >
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="genero"
+          id="femenino"
+          value="Femenino"
+        />
+        <label class="form-check-label" for="femenino"
+          >Femenino({{ obtenerTotalFemeninos() }})</label
+        >
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="genero"
+          id="masculino"
+          value="Masculino"
+        />
+        <label class="form-check-label" for="masculino"
+          >Masculino({{ obtenerTotalMasculinos() }})</label
+        >
+      </div>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-body">
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Salario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of listEmpleados">
+            <th>{{ empleado.id }}</th>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{ empleado.apellido }}</td>
+            <td>{{ empleado.genero }}</td>
+            <td>{{ empleado.salario | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
