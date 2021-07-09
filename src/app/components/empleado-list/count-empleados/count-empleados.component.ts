@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountEmpleadosComponent implements OnInit {
 
+  radioButtonSelect = 'Todos';
+
   constructor() { }
 
   ngOnInit(): void {
