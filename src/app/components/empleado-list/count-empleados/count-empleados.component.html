@@ -7,9 +7,10 @@
           name="genero"
           id="todos"
           value="Todos"
+          (change) = "radioChange()"
         />
         <label class="form-check-label" for="todos"
-          >Todos ()</label
+          >Todos ({{ todos }})</label
         >
       </div>
       <div class="form-check form-check-inline">
@@ -20,9 +21,10 @@
           name="genero"
           id="femenino"
           value="Femenino"
+          (change) = "radioChange()"
         />
         <label class="form-check-label" for="femenino"
-          >Femenino()</label
+          >Femenino({{ femenino }})</label
         >
       </div>
       <div class="form-check form-check-inline">
@@ -33,9 +35,10 @@
           name="genero"
           id="masculino"
           value="Masculino"
+          (change) = "radioChange()"
         />
         <label class="form-check-label" for="masculino"
-          >Masculino()</label
+          >Masculino({{ masculino }})</label
         >
       </div>
     </div>
